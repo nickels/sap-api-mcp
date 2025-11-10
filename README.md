@@ -11,12 +11,25 @@ A Model Context Protocol (MCP) server that provides access to the SAP API Busine
 
 ## Installation
 
+### Prerequisites
+
+This package is published to GitHub Packages. You need to configure npm to use GitHub Packages for `@nickels` scoped packages.
+
+Add the following to your global `~/.npmrc` file:
+
+```
+@nickels:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+
+**Important**: Replace `YOUR_GITHUB_TOKEN` with a GitHub Personal Access Token that has `read:packages` scope. Create one at https://github.com/settings/tokens
+
 ### Using npx (Recommended)
 
 You can run this MCP server directly using npx without installing it globally:
 
 ```bash
-npx @sap-community/api-hub-mcp
+npx @nickels/api-hub-mcp
 ```
 
 ### Local Development
@@ -57,10 +70,18 @@ Add this server to your Claude Desktop configuration file:
     "sap-api-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["--yes", "@sap-community/api-hub-mcp"]
+      "args": ["--yes", "@nickels/api-hub-mcp"]
     }
   }
 }
+```
+
+### Claude Code (CLI)
+
+Add this server using the Claude Code CLI:
+
+```bash
+claude mcp add sap-api-mcp npx --yes @nickels/api-hub-mcp
 ```
 
 For local development, use:
