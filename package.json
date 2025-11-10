@@ -1,0 +1,37 @@
+{
+  "name": "@sap-community/api-hub-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for SAP API Business Hub",
+  "type": "module",
+  "bin": {
+    "sap-api-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sap",
+    "api-hub",
+    "sap-api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
