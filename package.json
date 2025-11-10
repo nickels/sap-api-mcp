@@ -1,5 +1,5 @@
 {
-  "name": "@sap-community/api-hub-mcp",
+  "name": "@nickels/api-hub-mcp",
   "version": "0.1.0",
   "description": "Model Context Protocol server for SAP API Business Hub",
   "type": "module",
