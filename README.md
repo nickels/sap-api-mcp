@@ -70,7 +70,7 @@ Add this server to your Claude Desktop configuration file:
     "sap-api-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["--yes", "@nickels/api-hub-mcp"]
+      "args": ["@nickels/api-hub-mcp"]
     }
   }
 }
@@ -81,7 +81,7 @@ Add this server to your Claude Desktop configuration file:
 Add this server using the Claude Code CLI:
 
 ```bash
-claude mcp add sap-api-mcp npx --yes @nickels/api-hub-mcp
+claude mcp add sap-api-mcp npx @nickels/api-hub-mcp
 ```
 
 For local development, use:
